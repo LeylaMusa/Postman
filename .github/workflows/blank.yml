@@ -17,9 +17,6 @@ jobs:
       - name: Install Newman
         run: npm install -g newman
 
-      # If authentication is required
-      # - name: Login to Postman or set environment variables
-      #   run: newman login --token "PMAK-66659d6d9f0c230001c1449d-0a92294129cb538a1735bd3cdc2b2a0b1a"
-
+    
       - name: Run API tests with Newman
         run: newman run Books.postman_collection.json -e Books_env.postman_environment.json
